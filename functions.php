@@ -10,6 +10,12 @@ if (!defined('AQUILA_DIR_PATH')) {
 
 require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
 
+function aquila_get_theme_instance() {
+	\AQUILA_THEME\Inc\AQUILA_THEME::get_instance();
+}
+
+aquila_get_theme_instance();
+
 function aquila_theme_scripts () {
 	$url  = get_template_directory_uri();
 
