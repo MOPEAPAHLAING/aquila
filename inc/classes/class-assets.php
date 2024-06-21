@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstraps the Theme.
+ * Enqueue theme assets
  *
  * @package Aquila
  */
@@ -9,18 +9,17 @@ namespace AQUILA_THEME\Inc;
 
 use AQUILA_THEME\Inc\Traits\Singleton;
 
-class AQUILA_THEME {
+class Assets {
 	use Singleton;
 
 	protected function __construct() {
 
 		// load class.
-		Assets::get_instance();
-		Menus::get_instance();
-		$this->set_hooks();
+		$this->setup_hooks();
 	}
 
-	protected function set_hooks() {
-		// actions and filters
+	protected function setup_hooks() {
+
+
 	}
 }
