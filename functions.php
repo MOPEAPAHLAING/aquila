@@ -48,6 +48,12 @@ function setup_theme () {
 
 	add_theme_support( 'post-thumbnails' );
 
+	/**
+	 * Register image size
+	 */
+
+	add_image_size('featured-thumbnail', 350, 233, true);
+
 	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
 	add_image_size( 'featured-thumbnail', 350, 233, true );
