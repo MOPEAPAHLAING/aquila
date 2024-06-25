@@ -25,8 +25,18 @@
 
 			)
 		);
+		wp_link_pages(
+			[
+				'before' => '<div class="page-links">' .esc_html__('Pages:', 'aquila'),
+				'after' => '</div>',
+			]
+			);
 	} else {
-		aquila_the_excerpt(200);
+		?>
+		<div class="truncate-4">
+			<?php aquila_the_excerpt( 200 ); ?>
+		</div>
+		<?php
 		echo aquila_excerpt_more();
 	}
 	?>
