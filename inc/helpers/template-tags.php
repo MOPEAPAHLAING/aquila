@@ -28,6 +28,8 @@ function the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $add
 	echo get_the_post_custom_thumbnail( $post_id, $size, $additional_attributes);
 }
 
+//date and time
+
 function aquila_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
@@ -49,4 +51,15 @@ $posted_on = sprintf(
 );
 
 echo '<span class="posted_on text-secondary">' . $posted_on .'</span>';
+}
+
+//post by author
+
+function aquila_posted_by() {
+	$byline = sprintf(
+		esc_html_x(' by %s', 'post author', 'aquila'),
+		'<span class="author vcard"><a href="'. esc_url(get_author_posts_url(get_the_author_meta('ID'))).'">'. esc_html(get_the_author()).'</a></span>'
+	);
+
+	echo '<span class="byline text-secondary">'. $byline .'</span>';
 }
