@@ -23,7 +23,7 @@ function aquila_theme_scripts () {
 	wp_enqueue_style('style-css', get_stylesheet_uri());
 	wp_enqueue_style('bootstrap-css', $url . '/assets/src/library/css/bootstrap.min.css', [], false, 'all');
 
-	wp_enqueue_script('main-js', $url . '/assets/main.js', [], true);
+	wp_enqueue_script('main-js', $url . '/assets/main.js', ['jquery'], false, true);
 	wp_enqueue_script('bootstrap-js', $url . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true);
 }
 
